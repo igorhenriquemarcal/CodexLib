@@ -24,7 +24,7 @@ public abstract class Usuario {
         return matricula;
     }
 
-    public String nome(){
+    public String getNome(){
         return nome;
     }
 
