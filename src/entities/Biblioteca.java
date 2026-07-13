@@ -1,7 +1,7 @@
 package entities;
 import java.time.LocalDate;
 import java.util.ArrayList;
-
+import java.util.List;
 public class Biblioteca {
     private ArrayList<Livro> livros = new ArrayList<>();
     private ArrayList<Usuario> usuarios = new ArrayList<>();
@@ -105,5 +105,14 @@ public class Biblioteca {
                 System.out.println(e);
             }
         }
+    }
+    public List<Emprestimo> getEmprestimosAtivos() {
+        List<Emprestimo> ativos = new ArrayList<>();
+        for (Emprestimo e : emprestimos) {
+            if (!e.isDevolvido()) {
+                ativos.add(e);
+            }
+        }
+        return ativos;
     }
 }

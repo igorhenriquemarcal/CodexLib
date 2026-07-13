@@ -26,7 +26,7 @@ public class Aluno extends Usuario{
 
     @Override
     public String toString(){
-        return super.toString() + "Curso: " + curso + "| Tipo: Aluno";
+        return super.toString() + "| Curso: " + curso + "| Tipo: Aluno";
     }
 
 }
